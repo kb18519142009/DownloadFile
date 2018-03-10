@@ -159,11 +159,9 @@ public class DownloadVideoActivity extends AppCompatActivity implements View.OnC
         if (mMediaDataSourceFactory == null) {
             mMediaDataSourceFactory = buildDataSourceFactory(this, false);
         }
-
         if (mExtractorsFactory == null) {
             mExtractorsFactory = new DefaultExtractorsFactory();
         }
-
         if (mPlayer == null) {
             mPlayer = createNewPlayer(this);
             mPlayer.addListener(eventListener);

@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.downloadfile.R;
 import com.example.downloadfile.download.DownloadUtil;
@@ -48,7 +49,7 @@ import com.google.android.exoplayer2.util.Util;
 public class DownloadVideoActivity extends AppCompatActivity implements View.OnClickListener {
     private static final String TAG = "DownloadVideoActivity";
     private static final String PLAY_VIDEO_URL =
-            "http://c1.daishumovie.com/81e43a9a145339c2df17dcb115fa7649/5aa2af80/video/client/2017/11/3/B8F4C9E995064145849A9CA445C8F0D6_640x356_200_48_24.mp4";
+            "http://c1.daishumovie.com/7d2b85ce0799dacb96c3949e25d74678/5aa40100/video/client/2018/1/9/3F8F87CC040147F28AC97A4733491A8A_640x360_200_48_24.mp4";
     private static final DefaultBandwidthMeter BANDWIDTH_METER = new DefaultBandwidthMeter();
 
     private TextView tv_toolbar_title;
@@ -270,12 +271,13 @@ public class DownloadVideoActivity extends AppCompatActivity implements View.OnC
             }
 
             @Override
-            public void onFailure() {
-                Log.e(TAG, "onFailure: ");
+            public void onFailure(final String erroInfo) {
+                Log.e(TAG, "onFailure: " + erroInfo);
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
                         fl_circle_progress.setVisibility(View.GONE);
+                        Toast.makeText(mContext, erroInfo, Toast.LENGTH_SHORT).show();
                     }
                 });
             }

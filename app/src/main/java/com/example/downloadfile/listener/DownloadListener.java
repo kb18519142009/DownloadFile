@@ -12,5 +12,5 @@ public interface DownloadListener {
 
     void onFinish(String localPath);
 
-    void onFailure();
+    void onFailure(String erroInfo);
 }

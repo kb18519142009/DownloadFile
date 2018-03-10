@@ -83,7 +83,7 @@ public class DownloadUtil {
 
                 @Override
                 public void onFailure(Call<ResponseBody> call, Throwable t) {
-                    downloadListener.onFailure();
+                    downloadListener.onFailure("网络错误！");
                 }
             });
         } else {
@@ -96,6 +96,10 @@ public class DownloadUtil {
         long currentLength = 0;
         OutputStream os = null;
 
+        if (response.body() == null) {
+            downloadListener.onFailure("资源错误！");
+            return;
+        }
         InputStream is = response.body().byteStream();
         long totalLength = response.body().contentLength();
 
@@ -113,8 +117,10 @@ public class DownloadUtil {
                 }
             }
         } catch (FileNotFoundException e) {
+            downloadListener.onFailure("未找到文件！");
             e.printStackTrace();
         } catch (IOException e) {
+            downloadListener.onFailure("IO错误！");
             e.printStackTrace();
         } finally {
             if (os != null) {

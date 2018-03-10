@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.downloadfile.R;
@@ -110,12 +111,13 @@ public class DownloadPictureActivity extends AppCompatActivity implements View.O
             }
 
             @Override
-            public void onFailure() {
-                Log.e(TAG, "onFailure: ");
+            public void onFailure(final String erroInfo) {
+                Log.e(TAG, "onFailure: " + erroInfo);
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
                         fl_circle_progress.setVisibility(View.GONE);
+                        Toast.makeText(mContext, erroInfo, Toast.LENGTH_SHORT).show();
                     }
                 });
             }

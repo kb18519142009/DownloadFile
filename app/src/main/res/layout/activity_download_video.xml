@@ -12,8 +12,8 @@
     <com.google.android.exoplayer2.ui.SimpleExoPlayerView
         android:id="@+id/simpleExoPlayerView"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_below="@id/tool_bar" />
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
 
     <!--环形进度条-->
     <FrameLayout

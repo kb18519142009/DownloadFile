@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="toolbar_height">50dp</dimen>
+    <dimen name="other_toolbar_height">44dp</dimen>
+    <dimen name="divider_with_shadow_height">2.5dp</dimen>
+</resources>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.downloadfile.activity.MainActivity">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/layout_tool_bar" />
+
+    <Button
+        android:id="@+id/btn_download_picture"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/shape_publish_btn"
+        android:gravity="center"
+        android:text="@string/download_picture"
+        android:textColor="#2e2e2e"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btn_download_video"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@+id/btn_download_picture"
+        android:background="@drawable/shape_publish_btn"
+        android:gravity="center"
+        android:text="@string/download_video"
+        android:textColor="#2e2e2e"
+        android:textSize="14sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_with_shadow_height"
+        android:layout_below="@id/tool_bar"
+        android:background="@drawable/img_home_toolbar_shadow" />
+
+</RelativeLayout>

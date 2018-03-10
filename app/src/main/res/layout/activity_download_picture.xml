@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.downloadfile.activity.DownloadPictureActivity">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/layout_tool_bar" />
+
+    <ImageView
+        android:id="@+id/iv_picture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tool_bar" />
+
+    <!--环形进度条-->
+    <FrameLayout
+        android:id="@+id/fl_circle_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tool_bar"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_count_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_progress"
+            android:paddingBottom="100dp"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp"
+            android:paddingTop="5dp"
+            android:text="加载中..."
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:visibility="visible" />
+
+        <com.example.downloadfile.view.KbWithWordsCircleProgressBar
+            android:id="@+id/circle_progress"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_with_shadow_height"
+        android:layout_below="@id/tool_bar"
+        android:background="@drawable/img_home_toolbar_shadow" />
+
+</RelativeLayout>

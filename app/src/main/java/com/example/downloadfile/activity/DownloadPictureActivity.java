@@ -20,6 +20,10 @@ import com.example.downloadfile.util.permission.KbPermissionListener;
 import com.example.downloadfile.util.permission.KbPermissionUtils;
 import com.example.downloadfile.view.KbWithWordsCircleProgressBar;
 
+/**
+ * Description：图片下载界面
+ * Created by kang on 2018/3/9.
+ */
 public class DownloadPictureActivity extends AppCompatActivity implements View.OnClickListener {
     private static final String TAG = "DownloadPictureActivity";
     private static final String PICTURE_URL = "http://small-bronze.oss-cn-shanghai.aliyuncs.com/" +

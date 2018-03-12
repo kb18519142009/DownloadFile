@@ -1,7 +1,7 @@
 package com.example.downloadfile.listener;
 
 /**
- * Description：
+ * Description：下载相关的接口
  * Created by kang on 2018/3/9.
  */
 

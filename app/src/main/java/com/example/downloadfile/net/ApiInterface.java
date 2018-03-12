@@ -7,7 +7,7 @@ import retrofit2.http.Streaming;
 import retrofit2.http.Url;
 
 /**
- * Description：接口类
+ * Description：网络请求接口类
  * Created by kang on 2018/3/9.
  */
 

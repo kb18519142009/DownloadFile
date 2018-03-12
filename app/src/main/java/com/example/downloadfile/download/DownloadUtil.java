@@ -45,6 +45,7 @@ public class DownloadUtil {
     }
 
     public void downloadFile(String url, final DownloadListener downloadListener) {
+        //通过Url得到保存到本地的文件名
         String name = url;
         if (FileUtils.createOrExistsDir(PATH_CHALLENGE_VIDEO)) {
             int i = name.lastIndexOf('/');//一定是找最后一个'/'出现的位置

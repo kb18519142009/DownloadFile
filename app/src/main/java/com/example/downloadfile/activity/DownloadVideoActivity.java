@@ -46,6 +46,10 @@ import com.google.android.exoplayer2.upstream.DefaultHttpDataSourceFactory;
 import com.google.android.exoplayer2.upstream.HttpDataSource;
 import com.google.android.exoplayer2.util.Util;
 
+/**
+ * Description：视频下载界面
+ * Created by kang on 2018/3/9.
+ */
 public class DownloadVideoActivity extends AppCompatActivity implements View.OnClickListener {
     private static final String TAG = "DownloadVideoActivity";
     private static final String PLAY_VIDEO_URL =

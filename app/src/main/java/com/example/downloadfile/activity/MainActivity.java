@@ -11,29 +11,28 @@ import com.example.downloadfile.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private TextView tv_toolbar_title;
-    private Button btn_download_picture;
-    private Button btn_download_video;
+    private Button mDownloadPicture;
+    private Button mDownloadVideo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        tv_toolbar_title = findViewById(R.id.tv_toolbar_title);
-        tv_toolbar_title.setText(R.string.main_activity_title);
-        btn_download_picture = findViewById(R.id.btn_download_picture);
-        btn_download_picture.setOnClickListener(this);
-        btn_download_video = findViewById(R.id.btn_download_video);
-        btn_download_video.setOnClickListener(this);
+        TextView toolbarTitle = findViewById(R.id.tv_toolbar_title);
+        toolbarTitle.setText(R.string.main_activity_title);
+        mDownloadPicture = findViewById(R.id.btn_download_picture);
+        mDownloadPicture.setOnClickListener(this);
+        mDownloadVideo = findViewById(R.id.btn_download_video);
+        mDownloadVideo.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        if (v.getId() == R.id.btn_download_picture) {
+        if (v == mDownloadPicture) {
             Intent downloadPictureIntent = new Intent(MainActivity.this, DownloadPictureActivity.class);
             startActivity(downloadPictureIntent);
-        } else if (v.getId() == R.id.btn_download_video) {
+        } else if (v == mDownloadVideo) {
             Intent downloadVideoIntent = new Intent(MainActivity.this, DownloadVideoActivity.class);
             startActivity(downloadVideoIntent);
         }

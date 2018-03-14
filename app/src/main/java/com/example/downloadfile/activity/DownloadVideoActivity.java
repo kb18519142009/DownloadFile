@@ -56,10 +56,9 @@ public class DownloadVideoActivity extends AppCompatActivity implements View.OnC
             "http://c1.daishumovie.com/7d2b85ce0799dacb96c3949e25d74678/5aa40100/video/client/2018/1/9/3F8F87CC040147F28AC97A4733491A8A_640x360_200_48_24.mp4";
     private static final DefaultBandwidthMeter BANDWIDTH_METER = new DefaultBandwidthMeter();
 
-    private TextView tv_toolbar_title;
-    private FrameLayout btn_back;
-    private FrameLayout fl_circle_progress;
-    private KbWithWordsCircleProgressBar circle_progress;
+    private FrameLayout mBackLayout;
+    private FrameLayout mCircleProgressLayout;
+    private KbWithWordsCircleProgressBar mCircleProgress;
     private SimpleExoPlayerView simpleExoPlayerView;
 
     private Context mContext;
@@ -84,15 +83,15 @@ public class DownloadVideoActivity extends AppCompatActivity implements View.OnC
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_download_video);
 
-        tv_toolbar_title = findViewById(R.id.tv_toolbar_title);
-        tv_toolbar_title.setText(R.string.download_video);
-        btn_back = findViewById(R.id.btn_back);
-        btn_back.setOnClickListener(this);
-        fl_circle_progress = findViewById(R.id.fl_circle_progress);
-        circle_progress = findViewById(R.id.circle_progress);
-        simpleExoPlayerView = findViewById(R.id.simpleExoPlayerView);
-
         mContext = this;
+
+        TextView toolbaritle = findViewById(R.id.tv_toolbar_title);
+        toolbaritle.setText(R.string.download_video);
+        mBackLayout = findViewById(R.id.btn_back);
+        mBackLayout.setOnClickListener(this);
+        mCircleProgressLayout = findViewById(R.id.fl_circle_progress);
+        mCircleProgress = findViewById(R.id.circle_progress);
+        simpleExoPlayerView = findViewById(R.id.simpleExoPlayerView);
 
         initVideo();
 
@@ -153,7 +152,7 @@ public class DownloadVideoActivity extends AppCompatActivity implements View.OnC
 
     @Override
     public void onClick(View v) {
-        if (v.getId() == R.id.btn_back) {
+        if (v == mBackLayout) {
             finish();
         }
     }
@@ -236,7 +235,7 @@ public class DownloadVideoActivity extends AppCompatActivity implements View.OnC
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        fl_circle_progress.setVisibility(View.VISIBLE);
+                        mCircleProgressLayout.setVisibility(View.VISIBLE);
                     }
                 });
 
@@ -248,7 +247,7 @@ public class DownloadVideoActivity extends AppCompatActivity implements View.OnC
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        circle_progress.setProgress(currentLength);
+                        mCircleProgress.setProgress(currentLength);
                     }
                 });
 
@@ -261,7 +260,7 @@ public class DownloadVideoActivity extends AppCompatActivity implements View.OnC
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        fl_circle_progress.setVisibility(View.GONE);
+                        mCircleProgressLayout.setVisibility(View.GONE);
                         if (mPlayer == null) {
                             return;
                         }
@@ -278,7 +277,7 @@ public class DownloadVideoActivity extends AppCompatActivity implements View.OnC
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        fl_circle_progress.setVisibility(View.GONE);
+                        mCircleProgressLayout.setVisibility(View.GONE);
                         Toast.makeText(mContext, erroInfo, Toast.LENGTH_SHORT).show();
                     }
                 });

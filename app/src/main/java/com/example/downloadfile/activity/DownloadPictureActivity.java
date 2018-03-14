@@ -28,16 +28,13 @@ public class DownloadPictureActivity extends AppCompatActivity implements View.O
     private static final String TAG = "DownloadPictureActivity";
     private static final String PICTURE_URL = "http://small-bronze.oss-cn-shanghai.aliyuncs.com/" +
             "image/video/cover/2018/3/8/8BBC6C00DF78476C98AD9CA482DEF635.jpg";
-    private TextView tv_toolbar_title;
-    private FrameLayout btn_back;
-    private ImageView iv_picture;
-    private FrameLayout fl_circle_progress;
-    private KbWithWordsCircleProgressBar circle_progress;
+
+    private FrameLayout mBackLayout;
+    private ImageView mPicture;
+    private FrameLayout mCircleProgressLayout;
+    private KbWithWordsCircleProgressBar mCircleProgress;
 
     private Context mContext;
-
-    //下载相关
-    private DownloadUtil mDownloadUtil;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,13 +43,13 @@ public class DownloadPictureActivity extends AppCompatActivity implements View.O
 
         mContext = this;
 
-        tv_toolbar_title = findViewById(R.id.tv_toolbar_title);
-        tv_toolbar_title.setText(R.string.download_picture);
-        btn_back = findViewById(R.id.btn_back);
-        btn_back.setOnClickListener(this);
-        iv_picture = findViewById(R.id.iv_picture);
-        fl_circle_progress = findViewById(R.id.fl_circle_progress);
-        circle_progress = findViewById(R.id.circle_progress);
+        TextView toolbarTitle = findViewById(R.id.tv_toolbar_title);
+        toolbarTitle.setText(R.string.download_picture);
+        mBackLayout = findViewById(R.id.btn_back);
+        mBackLayout.setOnClickListener(this);
+        mPicture = findViewById(R.id.iv_picture);
+        mCircleProgressLayout = findViewById(R.id.fl_circle_progress);
+        mCircleProgress = findViewById(R.id.circle_progress);
 
         if (KbPermissionUtils.needRequestPermission()) {
             KbPermission.with(this)
@@ -76,15 +73,16 @@ public class DownloadPictureActivity extends AppCompatActivity implements View.O
     }
 
     private void downloadPicture() {
-        mDownloadUtil = new DownloadUtil();
-        mDownloadUtil.downloadFile(PICTURE_URL, new DownloadListener() {
+        //下载相关
+        DownloadUtil downloadUtil = new DownloadUtil();
+        downloadUtil.downloadFile(PICTURE_URL, new DownloadListener() {
             @Override
             public void onStart() {
                 Log.e(TAG, "onStart: ");
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        fl_circle_progress.setVisibility(View.VISIBLE);
+                        mCircleProgressLayout.setVisibility(View.VISIBLE);
                     }
                 });
 
@@ -96,7 +94,7 @@ public class DownloadPictureActivity extends AppCompatActivity implements View.O
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        circle_progress.setProgress(currentLength);
+                        mCircleProgress.setProgress(currentLength);
                     }
                 });
 
@@ -108,8 +106,8 @@ public class DownloadPictureActivity extends AppCompatActivity implements View.O
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        fl_circle_progress.setVisibility(View.GONE);
-                        Glide.with(mContext).load(localPath).into(iv_picture);
+                        mCircleProgressLayout.setVisibility(View.GONE);
+                        Glide.with(mContext).load(localPath).into(mPicture);
                     }
                 });
             }
@@ -120,7 +118,7 @@ public class DownloadPictureActivity extends AppCompatActivity implements View.O
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        fl_circle_progress.setVisibility(View.GONE);
+                        mCircleProgressLayout.setVisibility(View.GONE);
                         Toast.makeText(mContext, erroInfo, Toast.LENGTH_SHORT).show();
                     }
                 });
@@ -130,7 +128,7 @@ public class DownloadPictureActivity extends AppCompatActivity implements View.O
 
     @Override
     public void onClick(View v) {
-        if (v.getId() == R.id.btn_back) {
+        if (v == mBackLayout) {
             finish();
         }
     }

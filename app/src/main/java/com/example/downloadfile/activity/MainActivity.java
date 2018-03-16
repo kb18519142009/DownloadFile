@@ -2,6 +2,8 @@ package com.example.downloadfile.activity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,6 +13,7 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.example.downloadfile.R;
+import com.example.downloadfile.util.SystemUtil;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -28,6 +31,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            SystemUtil.setLightStatusBar(this, Color.WHITE);
+        }
 
         mContext = this;
 

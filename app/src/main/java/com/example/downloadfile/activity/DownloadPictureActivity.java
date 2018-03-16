@@ -2,6 +2,8 @@ package com.example.downloadfile.activity;
 
 import android.Manifest;
 import android.content.Context;
+import android.graphics.Color;
+import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,6 +17,7 @@ import com.bumptech.glide.Glide;
 import com.example.downloadfile.R;
 import com.example.downloadfile.download.DownloadUtil;
 import com.example.downloadfile.listener.DownloadListener;
+import com.example.downloadfile.util.SystemUtil;
 import com.example.downloadfile.util.permission.KbPermission;
 import com.example.downloadfile.util.permission.KbPermissionListener;
 import com.example.downloadfile.util.permission.KbPermissionUtils;
@@ -40,6 +43,9 @@ public class DownloadPictureActivity extends AppCompatActivity implements View.O
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_download_picture);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            SystemUtil.setLightStatusBar(this, Color.WHITE);
+        }
 
         mContext = this;
 

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.example.downloadfile.R;
@@ -30,6 +31,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         mContext = this;
 
+        FrameLayout backLayout = findViewById(R.id.btn_back);
+        backLayout.setVisibility(View.GONE);
         TextView toolbarTitle = findViewById(R.id.tv_toolbar_title);
         toolbarTitle.setText(R.string.main_activity_title);
         mDownloadPicture = findViewById(R.id.btn_download_picture);

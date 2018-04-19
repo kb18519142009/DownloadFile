@@ -320,7 +320,6 @@ public class DownloadVideoActivity extends AppCompatActivity implements View.OnC
             ma[i++] = new ExtractorMediaSource(Uri.parse(url),
                     mMediaDataSourceFactory, mExtractorsFactory, null, null);
         }
-
         return new ConcatenatingMediaSource(ma);
     }
 }

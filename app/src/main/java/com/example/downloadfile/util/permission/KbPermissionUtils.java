@@ -24,14 +24,18 @@ import com.example.downloadfile.util.DeviceUtils;
  */
 public class KbPermissionUtils {
 
-    private static KbPermissionUtils instance;
+    private volatile static KbPermissionUtils instance;
 
     private KbPermissionUtils() {
     }
 
     public static KbPermissionUtils getInstance() {
         if (instance == null) {
-            instance = new KbPermissionUtils();
+            synchronized (KbPermissionUtils.class) {
+                if (instance == null) {
+                    instance = new KbPermissionUtils();
+                }
+            }
         }
         return instance;
     }

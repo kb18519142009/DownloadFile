@@ -32,9 +32,7 @@ public class KbPermissionUtils {
     public static KbPermissionUtils getInstance() {
         if (instance == null) {
             synchronized (KbPermissionUtils.class) {
-                if (instance == null) {
-                    instance = new KbPermissionUtils();
-                }
+                if (instance == null) instance = new KbPermissionUtils();
             }
         }
         return instance;

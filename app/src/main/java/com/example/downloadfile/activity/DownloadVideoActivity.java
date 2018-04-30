@@ -60,10 +60,10 @@ public class DownloadVideoActivity extends AppCompatActivity implements View.OnC
             "http://c1.daishumovie.com/7d2b85ce0799dacb96c3949e25d74678/5aa40100/video/client/2018/1/9/3F8F87CC040147F28AC97A4733491A8A_640x360_200_48_24.mp4";
     private static final DefaultBandwidthMeter BANDWIDTH_METER = new DefaultBandwidthMeter();
 
-    private FrameLayout mBackLayout;
-    private FrameLayout mCircleProgressLayout;
-    private KbWithWordsCircleProgressBar mCircleProgress;
-    private SimpleExoPlayerView simpleExoPlayerView;
+    private FrameLayout mBackLayout; //返回按钮
+    private FrameLayout mCircleProgressLayout; //圆形进度条父布局
+    private KbWithWordsCircleProgressBar mCircleProgress; //圆形进度条
+    private SimpleExoPlayerView simpleExoPlayerView; //EXO播放器View
 
     private Context mContext;
 

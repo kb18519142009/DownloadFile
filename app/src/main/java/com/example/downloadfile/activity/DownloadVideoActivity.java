@@ -75,7 +75,6 @@ public class DownloadVideoActivity extends AppCompatActivity implements View.OnC
     //下载相关
     private DownloadUtil mDownloadUtil;
     private String mVideoPath; //下载到本地的视频路径
-
     private boolean mIsBackground; //是否进入后台
 
     @SuppressLint("HandlerLeak")

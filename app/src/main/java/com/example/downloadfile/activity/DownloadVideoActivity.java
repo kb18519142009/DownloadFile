@@ -81,7 +81,6 @@ public class DownloadVideoActivity extends AppCompatActivity implements View.OnC
     @SuppressLint("HandlerLeak")
     public Handler mHandler = new Handler();
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

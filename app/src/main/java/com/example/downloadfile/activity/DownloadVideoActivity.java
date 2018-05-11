@@ -85,6 +85,7 @@ public class DownloadVideoActivity extends AppCompatActivity implements View.OnC
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_download_video);
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             SystemUtil.setLightStatusBar(this, Color.WHITE);
         }

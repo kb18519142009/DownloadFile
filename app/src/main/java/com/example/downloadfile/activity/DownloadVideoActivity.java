@@ -193,7 +193,6 @@ public class DownloadVideoActivity extends AppCompatActivity implements View.OnC
 
         @Override
         public void onLoadingChanged(boolean isLoading) {
-
         }
 
         @Override

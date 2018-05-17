@@ -121,6 +121,7 @@ public class DownloadVideoActivity extends AppCompatActivity implements View.OnC
                     .send();
         } else {
             downloadVideo(); //处理具体下载过程
+
         }
     }
 

@@ -214,7 +214,6 @@ public class DownloadVideoActivity extends AppCompatActivity implements View.OnC
 
         @Override
         public void onRepeatModeChanged(int repeatMode) {
-
         }
 
         @Override
@@ -229,7 +228,6 @@ public class DownloadVideoActivity extends AppCompatActivity implements View.OnC
 
         @Override
         public void onPlaybackParametersChanged(PlaybackParameters playbackParameters) {
-
         }
     };
 

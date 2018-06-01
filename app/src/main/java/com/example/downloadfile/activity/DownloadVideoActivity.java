@@ -245,6 +245,7 @@ public class DownloadVideoActivity extends AppCompatActivity implements View.OnC
                 });
 
             }
+
             @Override
             public void onProgress(final int currentLength) {
                 Log.e(TAG, "onLoading: " + currentLength);

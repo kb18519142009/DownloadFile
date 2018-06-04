@@ -243,7 +243,6 @@ public class DownloadVideoActivity extends AppCompatActivity implements View.OnC
                         mCircleProgressLayout.setVisibility(View.VISIBLE);
                     }
                 });
-
             }
 
             @Override
@@ -255,7 +254,6 @@ public class DownloadVideoActivity extends AppCompatActivity implements View.OnC
                         mCircleProgress.setProgress(currentLength);
                     }
                 });
-
             }
 
             @Override

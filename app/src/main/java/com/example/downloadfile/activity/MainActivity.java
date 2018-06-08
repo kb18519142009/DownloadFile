@@ -41,7 +41,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         mDownloadPicture = findViewById(R.id.btn_download_picture);
         mDownloadPicture.setOnClickListener(this);
-
         mDownloadVideo = findViewById(R.id.btn_download_video);
         mDownloadVideo.setOnClickListener(this);
     }

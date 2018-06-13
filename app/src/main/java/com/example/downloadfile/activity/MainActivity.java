@@ -38,7 +38,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         TextView toolbarTitle = findViewById(R.id.tv_toolbar_title);
         toolbarTitle.setText(R.string.main_activity_title);
-
         mDownloadPicture = findViewById(R.id.btn_download_picture);
         mDownloadPicture.setOnClickListener(this);
         mDownloadVideo = findViewById(R.id.btn_download_video);

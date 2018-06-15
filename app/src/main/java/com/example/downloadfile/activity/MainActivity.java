@@ -30,7 +30,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             SystemUtil.setLightStatusBar(this, Color.WHITE);
         }
-
         mContext = this;
 
         FrameLayout backLayout = findViewById(R.id.btn_back);

@@ -44,6 +44,7 @@ public class CommonItemDecoration extends RecyclerView.ItemDecoration {
         int position = parent.getChildAdapterPosition(view);
         // 得到RecyclerView中Item的总个数
         int count = parent.getAdapter().getItemCount();
+
         if (parent.getLayoutManager() instanceof GridLayoutManager) { // 网格布局
             GridLayoutManager gridLayoutManager = (GridLayoutManager) parent.getLayoutManager();
             // 得到网格布局的列数

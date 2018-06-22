@@ -71,7 +71,7 @@ public class CommonItemDecoration extends RecyclerView.ItemDecoration {
                 horizontalColumnOne(outRect, position, count);
             }
         } else if (parent.getLayoutManager() instanceof StaggeredGridLayoutManager) { // 流布局
-            //TODO
+            //TODO 瀑布流布局相关
         }
     }
 

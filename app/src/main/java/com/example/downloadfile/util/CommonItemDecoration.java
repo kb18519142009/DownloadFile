@@ -12,7 +12,6 @@ import android.view.View;
  * Created by kang on 2018/3/9.
  */
 public class CommonItemDecoration extends RecyclerView.ItemDecoration {
-
     private int horizontalSpace; // 水平方向间距
     private int verticalSpace; // 垂直方向间距
     private int leftMargin; // 与左边的间距

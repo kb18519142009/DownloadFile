@@ -155,6 +155,7 @@ public class CommonItemDecoration extends RecyclerView.ItemDecoration {
         int totalColumn = count / spanCount + ((count % spanCount) == 0 ? 0 : 1);
         // 计算得出当前view所在的列
         int column = position / spanCount;
+
         // 通过对position加1对spanCount取余得到row
         // 保证row等于1为第一行，等于0为最后一个，其它值为中间行
         int row = (position + 1) % spanCount;

@@ -153,6 +153,7 @@ public class CommonItemDecoration extends RecyclerView.ItemDecoration {
     private void horizontalColumnMulti(Rect outRect, int position, int count, int spanCount) {
         // 通过计算得出总列数
         int totalColumn = count / spanCount + ((count % spanCount) == 0 ? 0 : 1);
+
         // 计算得出当前view所在的列
         int column = position / spanCount;
 

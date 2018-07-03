@@ -12,6 +12,7 @@ import android.view.View;
  * Created by kang on 2018/3/9.
  */
 public class CommonItemDecoration extends RecyclerView.ItemDecoration {
+    private static final String TAG = "CommonItemDecoration";
     private int horizontalSpace; // 整个RecyclerView与左右两侧的间距
     private int verticalSpace; // 整个RecyclerView与上下的间距
     private int leftMargin; // 每个item与左边的间距

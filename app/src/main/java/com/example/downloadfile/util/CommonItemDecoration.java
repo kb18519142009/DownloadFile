@@ -13,7 +13,6 @@ import android.view.View;
  */
 public class CommonItemDecoration extends RecyclerView.ItemDecoration {
     private static final String TAG = "CommonItemDecoration";
-
     private int horizontalSpace; // 整个RecyclerView与左右两侧的间距
     private int verticalSpace; // 整个RecyclerView与上下的间距
     private int leftMargin; // 每个item与左边的间距
@@ -73,6 +72,7 @@ public class CommonItemDecoration extends RecyclerView.ItemDecoration {
             }
         } else if (parent.getLayoutManager() instanceof StaggeredGridLayoutManager) { // 流布局
             //TODO 瀑布流布局相关
+
         }
     }
 

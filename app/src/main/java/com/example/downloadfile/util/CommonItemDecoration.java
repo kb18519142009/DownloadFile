@@ -11,6 +11,7 @@ import android.view.View;
  * Description：RecyclerView的万能间距
  * Created by kang on 2018/3/9.
  */
+
 public class CommonItemDecoration extends RecyclerView.ItemDecoration {
     private int horizontalSpace; // 整个RecyclerView与左右两侧的间距
     private int verticalSpace; // 整个RecyclerView与上下的间距
@@ -152,6 +153,7 @@ public class CommonItemDecoration extends RecyclerView.ItemDecoration {
      * @param spanCount 布局的行数
      */
     private void horizontalColumnMulti(Rect outRect, int position, int count, int spanCount) {
+
         // 通过计算得出总列数
         int totalColumn = count / spanCount + ((count % spanCount) == 0 ? 0 : 1);
 
@@ -178,5 +180,4 @@ public class CommonItemDecoration extends RecyclerView.ItemDecoration {
                     0);
         }
     }
-
 }

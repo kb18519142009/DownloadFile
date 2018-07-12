@@ -135,6 +135,7 @@ public class CommonItemDecoration extends RecyclerView.ItemDecoration {
      * @param count    RecyclerView中Item的总个数
      */
     private void horizontalColumnOne(Rect outRect, int position, int count) {
+
         if (position == 0) { // 位置为0时(即第一个Item)
             outRect.set(leftMargin, topMargin, horizontalSpace / 2, bottomMargin);
         } else if (position == count - 1) { // 最后一个Item

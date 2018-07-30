@@ -54,7 +54,6 @@ import com.google.android.exoplayer2.util.Util;
  * Created by kang on 2018/3/9.
  */
 public class DownloadVideoActivity extends AppCompatActivity implements View.OnClickListener {
-
     private static final String TAG = "DownloadVideoActivity";
     private static final String PLAY_VIDEO_URL =
             "http://c1.daishumovie.com/7d2b85ce0799dacb96c3949e25d74678/5aa40100/video/client/2018/1/9/3F8F87CC040147F28AC97A4733491A8A_640x360_200_48_24.mp4";

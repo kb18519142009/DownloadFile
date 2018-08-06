@@ -8,8 +8,8 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
 
 /**
- * Description：RecyclerView的万能间距
  * Created by kang on 2018/3/9.
+ * Description：RecyclerView的万能间距
  */
 
 public class CommonItemDecoration extends RecyclerView.ItemDecoration {

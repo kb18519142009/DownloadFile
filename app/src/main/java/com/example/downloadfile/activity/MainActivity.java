@@ -26,9 +26,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //设置状态栏颜色
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             SystemUtil.setLightStatusBar(this, Color.WHITE);
         }
+
         mContext = this;
 
         FrameLayout backLayout = findViewById(R.id.btn_back);

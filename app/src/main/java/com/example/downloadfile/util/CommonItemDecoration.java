@@ -40,6 +40,7 @@ public class CommonItemDecoration extends RecyclerView.ItemDecoration {
     @Override
     public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
         super.getItemOffsets(outRect, view, parent, state);
+
         // 得到当前Item在RecyclerView中的位置,从0开始
         int position = parent.getChildAdapterPosition(view);
         // 得到RecyclerView中Item的总个数
@@ -72,7 +73,6 @@ public class CommonItemDecoration extends RecyclerView.ItemDecoration {
             }
         } else if (parent.getLayoutManager() instanceof StaggeredGridLayoutManager) { // 流布局
             //TODO 瀑布流布局相关
-
         }
     }
 

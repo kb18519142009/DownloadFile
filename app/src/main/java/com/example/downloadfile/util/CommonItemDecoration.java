@@ -18,6 +18,7 @@ public class CommonItemDecoration extends RecyclerView.ItemDecoration {
 
     private int leftMargin; // 每个item与左边的间距
     private int topMargin; // 每个item与顶部的间距
+
     private int rightMargin; // 每个item与右边的间距
     private int bottomMargin; // 每个item与底部的间距
 

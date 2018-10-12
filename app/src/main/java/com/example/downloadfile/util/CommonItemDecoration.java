@@ -44,6 +44,7 @@ public class CommonItemDecoration extends RecyclerView.ItemDecoration {
 
         // 得到当前Item在RecyclerView中的位置,从0开始
         int position = parent.getChildAdapterPosition(view);
+
         // 得到RecyclerView中Item的总个数
         int count = parent.getAdapter().getItemCount();
 

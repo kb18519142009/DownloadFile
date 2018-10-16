@@ -15,6 +15,7 @@ import com.example.downloadfile.R;
 import com.example.downloadfile.util.SystemUtil;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
     private static final String TAG = "MainActivity";
     private Button mDownloadPicture; //下载图片按钮
     private Button mDownloadVideo; //下载视频按钮

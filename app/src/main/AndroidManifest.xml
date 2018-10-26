@@ -19,8 +19,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.DownloadPictureActivity" />
-        <activity android:name=".activity.DownloadVideoActivity" />
+        <activity
+            android:name=".activity.DownloadPictureActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.DownloadVideoActivity"
+            android:launchMode="singleTop" />
     </application>
 
 </manifest>

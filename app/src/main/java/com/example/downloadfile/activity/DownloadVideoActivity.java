@@ -218,7 +218,7 @@ public class DownloadVideoActivity extends AppCompatActivity implements View.OnC
 
         @Override
         public void onPlayerError(ExoPlaybackException error) {
-            Log.e(TAG, "onPlayerError: " + "播放: onPlayerError");
+            Log.e(TAG, "播放 onPlayerError: " + error.toString());
         }
 
         @Override
@@ -282,6 +282,7 @@ public class DownloadVideoActivity extends AppCompatActivity implements View.OnC
                     public void run() {
                         mCircleProgressLayout.setVisibility(View.GONE);
                         Toast.makeText(mContext, erroInfo, Toast.LENGTH_SHORT).show();
+                        finish();
                     }
                 });
             }

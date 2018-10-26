@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Log;
@@ -163,6 +164,12 @@ public class DownloadVideoActivity extends AppCompatActivity implements View.OnC
         if (v == mBackLayout) {
             finish();
         }
+    }
+
+    //必须添加，否则第一次请求成功权限不会走回调
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        KbPermission.onRequestPermissionResult(requestCode, permissions, grantResults);
     }
 
     //初始化视频

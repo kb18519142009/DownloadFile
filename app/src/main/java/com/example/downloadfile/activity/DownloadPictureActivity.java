@@ -4,6 +4,7 @@ import android.Manifest;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Build;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -138,5 +139,11 @@ public class DownloadPictureActivity extends AppCompatActivity implements View.O
         if (v == mBackLayout) {
             finish();
         }
+    }
+
+    //必须添加，否则第一次请求成功权限不会走回调
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        KbPermission.onRequestPermissionResult(requestCode, permissions, grantResults);
     }
 }

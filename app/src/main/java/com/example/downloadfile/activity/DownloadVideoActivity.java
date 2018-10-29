@@ -226,6 +226,7 @@ public class DownloadVideoActivity extends AppCompatActivity implements View.OnC
         @Override
         public void onPlayerError(ExoPlaybackException error) {
             Log.e(TAG, "播放 onPlayerError: " + error.toString());
+            Toast.makeText(DownloadVideoActivity.this, "播放失败！", Toast.LENGTH_SHORT).show();
         }
 
         @Override

@@ -55,7 +55,6 @@ import com.google.android.exoplayer2.util.Util;
  * Created by kang on 2018/3/9.
  */
 public class DownloadVideoActivity extends AppCompatActivity implements View.OnClickListener {
-
     private static final String TAG = "DownloadVideoActivity";
     //不知道还能不能用
     private static final String PLAY_VIDEO_URL =

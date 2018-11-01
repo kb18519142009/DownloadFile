@@ -89,7 +89,6 @@ public class DownloadVideoActivity extends AppCompatActivity implements View.OnC
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             SystemUtil.setLightStatusBar(this, Color.WHITE);
         }
-
         mContext = this;
 
         TextView toolbaritle = findViewById(R.id.tv_toolbar_title);

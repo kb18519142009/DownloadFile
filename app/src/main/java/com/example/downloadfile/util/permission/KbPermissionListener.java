@@ -5,7 +5,6 @@ package com.example.downloadfile.util.permission;
  * Created by kang on 2017/10/26.
  */
 public interface KbPermissionListener {
-
     /**
      * 授权
      */

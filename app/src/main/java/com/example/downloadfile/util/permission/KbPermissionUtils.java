@@ -23,7 +23,6 @@ import com.example.downloadfile.util.DeviceUtils;
  * Created by kang on 2017/10/26.
  */
 public class KbPermissionUtils {
-
     private volatile static KbPermissionUtils instance;
 
     private KbPermissionUtils() {

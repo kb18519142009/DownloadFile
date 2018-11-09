@@ -65,7 +65,6 @@ public class KbPermissionUtils {
                 return false;
             }
         }
-
         return true;
     }
 

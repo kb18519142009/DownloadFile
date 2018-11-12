@@ -117,7 +117,6 @@ public class KbPermissionUtils {
      * 跳转到权限设置界面
      */
     private static void getAppDetailSettingIntent(Context context) {
-
 //        Intent intent = new Intent(Settings.ACTION_SETTINGS);
 //        context.startActivity(intent);
 //        return;

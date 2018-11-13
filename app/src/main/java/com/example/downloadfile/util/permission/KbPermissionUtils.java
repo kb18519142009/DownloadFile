@@ -52,7 +52,6 @@ public class KbPermissionUtils {
                 return false;
             }
         }
-
         for (String permission : permissions) {
             String op = AppOpsManagerCompat.permissionToOp(permission);
             if (TextUtils.isEmpty(op)) continue;

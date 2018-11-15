@@ -45,7 +45,6 @@ public class KbPermissionUtils {
      * @return
      */
     public boolean checkPermission(Context context, String... permissions) {
-
         for (String permission : permissions) {
             // 判断当前该权限是否允许
             if (ContextCompat.checkSelfPermission(context, permission) != PackageManager.PERMISSION_GRANTED) {

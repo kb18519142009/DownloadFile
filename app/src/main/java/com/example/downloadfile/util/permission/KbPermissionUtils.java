@@ -36,7 +36,6 @@ public class KbPermissionUtils {
         }
         return instance;
     }
-
     /**
      * 检查权限检查
      *

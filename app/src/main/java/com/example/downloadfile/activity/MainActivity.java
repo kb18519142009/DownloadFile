@@ -18,7 +18,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private static final String TAG = "MainActivity";
     private Button mDownloadPicture; //下载图片按钮
     private Button mDownloadVideo; //下载视频按钮
-
     private Context mContext;
 
     @Override

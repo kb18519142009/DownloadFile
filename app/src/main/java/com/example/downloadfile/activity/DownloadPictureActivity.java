@@ -49,6 +49,7 @@ public class DownloadPictureActivity extends AppCompatActivity implements View.O
             SystemUtil.setLightStatusBar(this, Color.WHITE);
         }
         mContext = this;
+
         TextView toolbarTitle = findViewById(R.id.tv_toolbar_title);
         toolbarTitle.setText(R.string.download_picture);
         mBackLayout = findViewById(R.id.btn_back);

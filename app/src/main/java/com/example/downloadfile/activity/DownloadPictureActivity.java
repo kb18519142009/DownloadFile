@@ -36,6 +36,7 @@ public class DownloadPictureActivity extends AppCompatActivity implements View.O
     private ImageView mPicture;
     private FrameLayout mCircleProgressLayout;
     private KbWithWordsCircleProgressBar mCircleProgress;
+
     private Context mContext;
 
     @Override

@@ -34,6 +34,7 @@ public class DownloadPictureActivity extends AppCompatActivity implements View.O
             "image/video/cover/2018/3/8/8BBC6C00DF78476C98AD9CA482DEF635.jpg";
     private FrameLayout mBackLayout;
     private ImageView mPicture;
+
     private FrameLayout mCircleProgressLayout;
     private KbWithWordsCircleProgressBar mCircleProgress;
     private Context mContext;

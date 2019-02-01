@@ -30,6 +30,7 @@ import com.example.downloadfile.view.KbWithWordsCircleProgressBar;
  */
 public class DownloadPictureActivity extends AppCompatActivity implements View.OnClickListener {
     private static final String TAG = "DownloadPictureActivity";
+
     private static final String PICTURE_URL = "http://small-bronze.oss-cn-shanghai.aliyuncs.com/" +
             "image/video/cover/2018/3/8/8BBC6C00DF78476C98AD9CA482DEF635.jpg";
     private FrameLayout mBackLayout;

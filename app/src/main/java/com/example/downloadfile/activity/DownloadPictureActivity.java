@@ -89,7 +89,6 @@ public class DownloadPictureActivity extends AppCompatActivity implements View.O
                         mCircleProgressLayout.setVisibility(View.VISIBLE);
                     }
                 });
-
             }
 
             @Override
@@ -101,7 +100,6 @@ public class DownloadPictureActivity extends AppCompatActivity implements View.O
                         mCircleProgress.setProgress(currentLength);
                     }
                 });
-
             }
 
             @Override
